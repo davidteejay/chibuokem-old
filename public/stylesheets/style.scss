@@ -222,13 +222,16 @@ body, html {
 
                 .col {
                     height: 250px;
+                    padding: 20px;
+                    
 
                     @media screen and (max-width: 992px){
                         height: 200px;
                     }
 
-                    @media screen and (max-width: 992px){
+                    @media screen and (max-width: 600px){
                         height: 100px;
+                        padding: 0;
                     }
 
                     .valign {
