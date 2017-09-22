@@ -1,0 +1,405 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    
+    &::-webkit-scrollbar {
+        width: 13px;
+        border-radius: 15px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 15px;
+        background-color: #ddd;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background-color: #666;
+        border: 3px solid #fff;
+    }
+}
+
+@keyframes opacity-up-down {
+    0% {
+        opacity: 1;
+    } 50% {
+        opacity: .05;
+    } 100% {
+        opacity: 1;
+    } 
+}
+
+.wrapper1 {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 4px 7px rgba(#000, .7);
+    
+    .row {
+        height: 100%;
+        
+        .hide-on-med-and-down {
+            width: 50%;
+            
+            @media screen and (max-width: 992px){
+                width: 0;
+            }
+        }
+        
+        .valign-wrapper {
+            background-color: rgba(#000, .4);
+            border-radius: 5px;
+            height: inherit;
+            width: 50%;
+            box-shadow: 2px 2px 5px rgba(#000, .7);
+            
+            @media screen and (max-width: 992px){
+                width: 100%;
+            }
+            
+            .valign {
+                width: 100%;
+                height: auto;
+                
+                .img {
+                    height: 220px;
+                    width: 210px;
+                    padding: 10px;
+                    border-radius: 100%;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    background-color: rgba(#fff, .3);
+                    
+                    @media screen and (max-width: 600px){
+                        height: 170px;
+                        width: 165px;
+                    }
+                    
+                    img {
+                        height: 200px;
+                        width: 190px;
+
+                        @media screen and (max-width: 600px){
+                            height: 150px;
+                            width: 145px;
+                        }
+                    }
+                }
+                
+                h1 {
+                    font: {
+                        size: 48px;
+                        weight: lighter;
+                    }
+                    margin: 0;
+                    color: #fff;
+                    
+                    @media screen and (max-width: 600px){
+                        font-size: 36px;
+                    }
+                }
+                
+                .social {
+                    margin: {
+                        top: 20px;
+                        bottom: 20px;
+                    }
+                    width: 100%;
+                    
+                    a {
+                        border: 1px solid #fff;
+                        height: 65px;
+                        width: 65px;
+                        line-height: 65px;
+                        margin: {
+                            left: 10px;
+                            right: 10px;
+                        }
+                        opacity: .4;
+                        transition: opacity .7s;
+                        
+                        &:hover {
+                            opacity: 1;
+                        }
+                        
+                        @media screen and (max-width: 600px){
+                            line-height: 40px;
+                            height: 40px;
+                            width: 40px;
+                        }
+                        
+                        .mdi::before {
+                            line-height: 65px;
+                            font-size: 28px;
+                            
+                            @media screen and (max-width: 600px){
+                                line-height: 40px;
+                                font-size: 22px;
+                            } 
+                        }
+                    }
+                }
+                
+                h3 {
+                    font: {
+                        weight: lighter;
+                        size: 24px;
+                    }
+                    margin: 0;
+                    color: #fff;
+                    
+                    @media screen and (max-width: 600px){
+                        font-size: 18x;
+                    }
+                }
+                
+                a[href="#wrapper2"]{
+                    border: 1px solid #fff;
+                    height: 65px;
+                    width: 65px;
+                    line-height: 65px;
+                    margin: {
+                        left: 10px;
+                        right: 10px;
+                        top: 50px;
+                    }
+                    opacity: 1;
+                    animation: {
+                        name: opacity-up-down;
+                        iteration-count: infinite;
+                        duration: 2s;
+                    }
+
+                    .mdi::before {
+                        line-height: 65px;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrapper2 {
+    height: auto;
+    width: 100%;
+    
+    .wrapper {
+        width: 100%;
+        height: auto;
+        padding: 35px;
+        
+        h4 {
+            margin: 0 !important;
+            font-style: bolder;
+        }
+        
+        .things-do {
+            height: auto;
+            width: 100%;
+            margin-bottom: 0;
+            
+            .col {
+                padding: 10px;
+                
+                img {
+                    height: 150px;
+                    
+                    @media screen and (max-width: 600px){
+                        height: 100px;
+                    }
+                }
+            }
+        }
+        
+        .tools {
+            padding: {
+                left: 65px;
+                right: 65px;
+            }
+            border: {
+                top: .5px solid #000;
+                bottom: .5px solid #000;
+            }
+            margin-bottom: 20px;
+            
+            img {
+//                filter: grayscale(100%);
+            }
+        }
+    }
+    
+    .skills {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        
+        .hide-on-med-and-down {
+            width: 50%;
+            
+            @media screen and (max-width: 992px){
+                width: 0;
+            }
+        }
+        
+        .valign-wrapper {
+            background-color: rgba(#FFF, .6);
+            height: inherit;
+            width: 50%;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(#000, .7);
+            border-radius: 5px;
+            
+            @media screen and (max-width: 992px){
+                width: 100%;
+            }
+            
+            .valign {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                font-size: 20px;
+                
+                h5 {
+                    margin-bottom: 30px;
+                }
+                
+                .progress {
+                    margin: {
+                        top: 20px;
+                        bottom: 20px;
+                    }
+                    
+                    .determinate {
+                        width: 0%;
+                    }
+                    
+                    .flow-html {
+                        animation: flow-html 2s;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    .flow-css {
+                        animation: flow-css 2s;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    .flow-js {
+                        animation: flow-js 2s;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    .flow-python {
+                        animation: flow-python 2s;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                    .flow-php {
+                        animation: flow-php 2s;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+    }
+    
+    .testimonials {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        
+        .slider {
+            width: 50%;
+            margin: auto;
+            
+            .indicators {
+                text-align: right;
+            }
+            
+            .slides {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, .7);
+                border-radius: 10px;
+                
+                .valign-wrapper {
+                    border-radius: 10px;
+                    background-color: transparent;
+                    height: inherit;
+                    width: 100%;
+                    
+                    .valign {
+                        height: auto;
+                        width: 100%;
+                        left: 0 !important;
+                        top: auto !important;
+                        padding: 60px;
+                        
+                        img {
+                            width: 150px;
+                            height: 160px;
+                        }
+                        
+                        p {
+                            font-size: 17px;
+                            text-align: left;
+                            margin: 0;
+                        }
+                        
+                        .referrer {
+                            font-size: 16px;
+                        }
+                        
+                        .ref-title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrapper3 {
+    
+}
+
+@keyframes flow-html {
+    from {
+        width: 0%;
+    } to {
+        width: 90%;
+    }
+}
+
+@keyframes flow-css {
+    from {
+        width: 0%;
+    } to {
+        width: 85%;
+    }
+}
+
+@keyframes flow-js {
+    from {
+        width: 0%;
+    } to {
+        width: 70%;
+    }
+}
+
+@keyframes flow-python {
+    from {
+        width: 0%;
+    } to {
+        width: 35%;
+    }
+}
+
+@keyframes flow-php {
+    from {
+        width: 0%;
+    } to {
+        width: 65%;
+    }
+}
