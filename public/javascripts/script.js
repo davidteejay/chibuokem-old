@@ -25,13 +25,13 @@ $(function(){
 
 
         typewriter.typeString("SOCIAL")
-            .pauseFor(200)
+            .pauseFor(2000)
             .deleteAll()
             .typeString('JOVIAL')
-            .pauseFor(200)
+            .pauseFor(2000)
             .deleteAll()
             .typeString('SMART')
-            .pauseFor(200)
+            .pauseFor(2000)
             .deleteAll()
             .typeString('EGOCENTRIC')
             .start();
