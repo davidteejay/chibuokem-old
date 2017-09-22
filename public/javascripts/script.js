@@ -41,6 +41,6 @@ $(function(){
     });
     
     $('.slider').slider({
-        interval: 3000
+        interval: 4500
     });
 })
