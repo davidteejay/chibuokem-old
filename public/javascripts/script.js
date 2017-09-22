@@ -1,7 +1,7 @@
 $(function(){
     $('.parallax').parallax();
     
-    $(".next").on('click', function(event) {
+    $(".next, .to-top").on('click', function(){
         event.preventDefault();
 
         var hash = this.hash;
@@ -37,7 +37,7 @@ $(function(){
             .start();
     }, 3000);
     
-    $(window).on('scroll', function(){
+    $(window).on('scroll', () => {
         $(".determinate").each(function(){
             var pos = $(this).offset().top;
             var winTop = $(window).scrollTop();
@@ -49,6 +49,12 @@ $(function(){
                 $(".python").addClass("flow-python");
                 $(".php").addClass("flow-php");
             }
+
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                $('.to-top').addClass('slideup').removeClass('slidedown');
+            } else {
+                $('.to-top').addClass('slidedown').removeClass('slideup');
+            }
         });
     });
     
@@ -57,8 +63,8 @@ $(function(){
     });
     
     // My custom parallax
-    $(window).on('scroll', function(){
+    $(window).on('scroll', () => {
         var ypos = window.pageYOffset;
         $('.parallax-img').css('top', ypos * .7 + 'px');
-    })
-})
+    });
+});

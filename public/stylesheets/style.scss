@@ -54,7 +54,7 @@ body, html {
     }
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto";
 }
 
@@ -66,6 +66,51 @@ h1, h2, h3, h4, h5 {
     } 100% {
         opacity: 1;
     } 
+}
+
+@keyframes to-top-slide-up {
+    from {
+        height: 0px;
+    } to {
+        height: 50px;
+    }
+}
+
+@keyframes to-top-slide-down {
+    from {
+        height: 50px;
+    } to {
+        height: 0px;
+    }
+}
+
+.to-top {
+    height: 0px;
+    width: 50px;
+    background-color: rgba(#000, .4);
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 110;
+
+    .mdi::before {
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        color: #fff !important;
+    }
+}
+
+.to-top.slideup {
+    animation: to-top-slide-up .5s;
+    animation-fill-mode: forwards;
+}
+
+.to-top.slidedown {
+    animation: to-top-slide-down .5s;
+    animation-fill-mode: forwards;
 }
 
 .wrapper1 {
@@ -84,7 +129,6 @@ h1, h2, h3, h4, h5 {
         position: relative;
         z-index: -1;
         top: 0;
-        filter: blur(1.5px);
     }
     
     .row {
@@ -184,6 +228,13 @@ h1, h2, h3, h4, h5 {
                             margin: {
                                 left: 5px;
                                 right: 5px;
+                            }
+                        }
+
+                        @media screen and (max-width: 550px){
+                            margin: {
+                                left: 2px;
+                                right: 2px;
                             }
                         }
                         
@@ -441,7 +492,7 @@ h1, h2, h3, h4, h5 {
             }
             
             @media screen and (max-width: 600px){
-                width: 85%;
+                width: 90%;
             }
             
             .indicators {
@@ -480,6 +531,14 @@ h1, h2, h3, h4, h5 {
                         left: 0 !important;
                         top: auto !important;
                         padding: 60px;
+
+                        @media screen and (max-width: 600px){
+                            padding: 20px;
+                            padding: {
+                                top: 10px;
+                                bottom: 10px;
+                            }
+                        }
                         
                         img {
                             width: 150px;
@@ -487,7 +546,7 @@ h1, h2, h3, h4, h5 {
                         }
                         
                         p {
-                            font-size: 17px;
+                            font-size: 18px;
                             text-align: left;
                             margin: 0;
                         }
