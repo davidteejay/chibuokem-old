@@ -1,6 +1,7 @@
 body, html {
     width: 100%;
     height: 100%;
+    min-height: 700px;
     
     &::-webkit-scrollbar {
         width: 13px;
@@ -32,10 +33,27 @@ body, html {
 .wrapper1 {
     height: 100%;
     width: 100%;
-    padding: 10px;
+    
+    .parallax-img {
+        background: {
+            image: url(/images/image2.png);
+            repeat: no-repeat;
+            size: cover;
+            position: center right;
+        }
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: -1;
+        top: 0;
+    }
     
     .row {
         height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        padding: 10px;
         
         .hide-on-med-and-down {
             width: 50%;
@@ -49,6 +67,7 @@ body, html {
             background-color: rgba(#000, .4);
             height: inherit;
             width: 50%;
+            padding: 20px;
             
             @media screen and (max-width: 992px){
                 width: 100%;
@@ -67,7 +86,7 @@ body, html {
                     margin-bottom: 20px;
                     background-color: rgba(#fff, .3);
                     
-                    @media screen and (max-width: 600px){
+                    @media screen and (max-width: 1120px){
                         height: 170px;
                         width: 165px;
                     }
@@ -76,7 +95,7 @@ body, html {
                         height: 200px;
                         width: 190px;
 
-                        @media screen and (max-width: 600px){
+                        @media screen and (max-width: 1120px){
                             height: 150px;
                             width: 145px;
                         }
@@ -91,7 +110,7 @@ body, html {
                     margin: 0;
                     color: #fff;
                     
-                    @media screen and (max-width: 600px){
+                    @media screen and (max-width: 1120px){
                         font-size: 36px;
                     }
                 }
@@ -119,20 +138,39 @@ body, html {
                             opacity: 1;
                         }
                         
-                        @media screen and (max-width: 600px){
+                        @media screen and (max-width: 1120px){
                             line-height: 40px;
                             height: 40px;
                             width: 40px;
+                            margin: {
+                                left: 5px;
+                                right: 5px;
+                            }
+                        }
+                        
+                        @media screen and (max-height: 700px){
+                            line-height: 40px;
+                            height: 40px;
+                            width: 40px;
+                            margin: {
+                                left: 5px;
+                                right: 5px;
+                            }
                         }
                         
                         .mdi::before {
                             line-height: 65px;
                             font-size: 28px;
                             
-                            @media screen and (max-width: 600px){
+                            @media screen and (max-width: 1120px){
                                 line-height: 40px;
                                 font-size: 22px;
-                            } 
+                            }
+                            
+                            @media screen and (max-height: 700px){
+                                line-height: 40px;
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
@@ -145,7 +183,7 @@ body, html {
                     margin: 0;
                     color: #fff;
                     
-                    @media screen and (max-width: 600px){
+                    @media screen and (max-width: 1120px){
                         font-size: 18x;
                     }
                 }
@@ -166,10 +204,34 @@ body, html {
                         iteration-count: infinite;
                         duration: 2s;
                     }
+                    
+                    @media screen and (max-width: 1120px){
+                        margin-top: 30px;
+                        height: 45px;
+                        width: 45px;
+                        line-height: 45px;
+                    }
+                    
+                    @media screen and (max-height: 700px){
+                        margin-top: 30px;
+                        height: 45px;
+                        width: 45px;
+                        line-height: 45px;
+                    }
 
                     .mdi::before {
                         line-height: 65px;
                         font-size: 28px;
+                        
+                        @media screen and (max-width: 1120px){
+                            line-height: 45px;
+                            font-size: 22px;
+                        }
+                        
+                        @media screen and (max-height: 700px){
+                            line-height: 45px;
+                            font-size: 22px;
+                        }
                     }
                 }
             }
@@ -184,10 +246,16 @@ body, html {
     .wrapper {
         width: 100%;
         height: auto;
+        padding-top: 40px;
         
         h4 {
             margin: 0 !important;
             font-style: bolder;
+            
+            .typewriter-wrapper {
+                border-bottom: .5px solid olivedrab;
+                padding-bottom: 0 !important;
+            }
         }
         
         .things-do {
@@ -230,8 +298,8 @@ body, html {
                     }
 
                     @media screen and (max-width: 600px){
-                        height: 100px;
-                        padding: 0;
+                        height: 150px;
+                        padding: 5px;
                     }
 
                     .valign {
@@ -259,7 +327,11 @@ body, html {
             background-color: rgba(#FFF, .6);
             height: inherit;
             width: 50%;
-            padding: 20px;
+            padding: 40px;
+            padding: {
+                top: 25px !important;
+                bottom: 25px !important;
+            }
             
             @media screen and (max-width: 992px){
                 width: 100%;
@@ -268,7 +340,6 @@ body, html {
             .valign {
                 width: 100%;
                 height: auto;
-                padding: 20px;
                 font-size: 20px;
                 
                 h5 {
@@ -323,21 +394,43 @@ body, html {
             width: 50%;
             margin: auto;
             
+            @media screen and (max-width: 992px){
+                width: 75%;
+            }
+            
+            @media screen and (max-width: 600px){
+                width: 85%;
+            }
+            
             .indicators {
                 text-align: right;
+                margin: {
+                    bottom: 10px;
+                    right: 10px;
+                }
+                z-index: 100;
+                
+                .indicator-item {
+                    background-color: transparent;
+                    border: 1px solid #fff;
+                }
+                
+                .indicator-item.active {
+                    background-color: #fff;
+                    border: none;
+                }
             }
             
             .slides {
                 width: 100%;
-                height: 100%;
-                background-color: rgba(#000, .7);
+                height: inherit;
                 border-radius: 10px;
+                background-color: transparent !important;
                 
                 .valign-wrapper {
-                    border-radius: 10px;
-                    background-color: transparent;
-                    height: inherit;
+                    height: 100%;
                     width: 100%;
+                    background-color: rgba(#000, .7);
                     
                     .valign {
                         height: auto;
