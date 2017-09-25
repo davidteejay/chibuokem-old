@@ -24,7 +24,7 @@ $(function(){
 
 
 
-        typewriter.typeString("SOCIAL")
+        typewriter.typeString('SOCIAL')
             .pauseFor(2000)
             .deleteAll()
             .typeString('JOVIAL')
