@@ -337,11 +337,13 @@ body, html {
         .tools {
             width: 100%;
             background-color: #ebebeb;
-            
+            clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+
             .row {
                 padding: {
                     left: 65px;
                     right: 65px;
+                    top: 30px;
                 }
                 margin-bottom: 0px;
 
@@ -375,6 +377,7 @@ body, html {
     }
     
     .skills {
+        clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
         width: 100%;
         height: auto;
         padding: 10px;
