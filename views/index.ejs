@@ -9,6 +9,24 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+    <div class="preloader valign-wrapper">
+        <div class="content center valign">
+            <h3 class="light">Loading...</h3>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <a href="#wrapper1" class="to-top"><i class="mdi mdi-chevron-double-up"></i></a>
     <div class="wrapper1 parallax-container" id="wrapper1">
         <div class="row">
@@ -86,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="skills parallax-container row">
+        <div class="skills parallax-container row" id="skills">
             <div class="col l6 valign-wrapper">
                 <div class="skills-content valign light">
                     <h5 class="light">HERE ARE A FEW OF MY SKILLS:</h5>
@@ -94,22 +112,27 @@
                         <div class="determinate black html"></div>
                     </div>
                     <i class="mdi mdi-language-html5"></i>&nbsp;&nbsp;HTML5
+                    <div class="right"><span class="timer">90</span>%</div>
                     <div class="progress grey lighten-2">
                         <div class="determinate black css"></div>
                     </div>
                     <i class="mdi mdi-language-css3"></i>&nbsp;&nbsp;CSS3 | SASS
+                    <div class="right"><span class="timer">85</span>%</div>
                     <div class="progress grey lighten-2">
                         <div class="determinate black js"></div>
                     </div>
                     <i class="mdi mdi-language-javascript"></i>&nbsp;&nbsp;JAVASCRIPT
+                    <div class="right"><span class="timer">70</span>%</div>
                     <div class="progress grey lighten-2">
                         <div class="determinate black php"></div>
                     </div>
                     <i class="mdi mdi-language-php"></i>&nbsp;&nbsp;PHP | MYSQL
+                    <div class="right"><span class="timer">65</span>%</div>
                     <div class="progress grey lighten-2">
                         <div class="determinate black python"></div>
                     </div>
                     <i class="mdi mdi-language-python"></i>&nbsp;&nbsp;PYTHON
+                    <div class="right"><span class="timer">35</span>%</div>
                 </div>
             </div>
             <div class="col l6 hide-on-med-and-down">
@@ -170,6 +193,8 @@
         </div>
     </div>
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="/javascripts/wow.min.js"></script>    
     <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
     <script type="text/javascript" src="/javascripts/typewriter.js"></script>
     <script type="text/javascript" src="/javascripts/script.js"></script>
