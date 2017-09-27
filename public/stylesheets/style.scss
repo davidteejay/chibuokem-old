@@ -1,40 +1,9 @@
-/* Fonts */
-@font-face {
-    font-family: "Mosk";
-    src: local(Mosk Extra-Light), url("../fonts/Mosk-Typeface/Mosk Extra-Light 200.ttf");
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: "Mosk";
-    src: local(Mosk Light), url("../fonts/Mosk-Typeface/Mosk Light 300.ttf");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "Mosk";
-    src: local(Mosk Normal), url("../fonts/Mosk-Typeface/Mosk Normal 400.ttf");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Mosk";
-    src: local(Mosk Medium), url("../fonts/Mosk-Typeface/Mosk Medium 500.ttf");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Mosk";
-    src: local(Mosk Bold), url("../fonts/Mosk-Typeface/Mosk Bold 700.ttf");
-    font-weight: 700
-}
-
 body, html {
     width: 100%;
     height: 100%;
     min-height: 600px;
     font: {
-        family: "Mosk", "Roboto", sans-serif;
+        family: "Montserrat", "Roboto", sans-serif;
         size: 17px;
     }
     
@@ -55,9 +24,9 @@ body, html {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto";
-}
+//h1, h2, h3, h4, h5, h6 {
+//    font-family: "Roboto";
+//}
 
 .preloader {
     position: fixed;
@@ -200,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
                 
                 h1 {
                     font: {
-                        size: 48px;
+                        size: 44px;
                         weight: lighter;
                     }
                     margin: 0;
@@ -269,7 +238,6 @@ h1, h2, h3, h4, h5, h6 {
                     font: {
                         weight: lighter;
                         size: 24px;
-                        family: "Mosk" !important;
                     }
                     margin: 0;
                     color: #fff;
@@ -348,7 +316,6 @@ h1, h2, h3, h4, h5, h6 {
             .typewriter-wrapper {
                 border-bottom: .5px solid olivedrab;
                 padding-bottom: 0 !important;
-                font-family: "Mosk";
             }
         }
         
@@ -373,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
         
         .tools {
             width: 100%;
-            background-color: #e5e5e5;
+            background-color: #ebebeb;
             
             .row {
                 padding: {
@@ -605,7 +572,27 @@ h1, h2, h3, h4, h5, h6 {
             img {
                 box-shadow: 1px 1px 2px rgba(#000, .5);
             }
+            
+            h4 {
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-top: 5px;
+                
+                &:first-letter {
+                    font-size: 32px;
+                }
+            }
         }
+    }
+}
+
+.materialbox-caption {
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #d5d5d5;
+    font: {
+        size: 22px;
+        weight: lighter;
     }
 }
 
