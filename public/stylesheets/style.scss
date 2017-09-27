@@ -122,17 +122,26 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     
     .parallax-img {
-        background: {
-            image: url(/images/image2.jpg);
-            repeat: no-repeat;
-            size: cover;
-            position: center right;
+        @media screen and (max-width: 992px){
+            background: {
+                image: url(/images/image2.jpg);
+                repeat: no-repeat;
+                size: cover;
+                position: center right;
+                attachment: fixed;
+            }
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: -1;
+            top: 0;
         }
-        height: 100%;
-        width: 100%;
-        position: relative;
-        z-index: -1;
-        top: 0;
+        
+        img {
+            @media screen and (max-width: 992px){
+                opacity: 0;
+            }
+        }
     }
     
     .row {

@@ -4,8 +4,6 @@ $(function(){
 		$('.preloader').slideUp();
 	});
     
-    //Initiate WOW JS
-	new WOW().init();
     $('.parallax').parallax();
     
     //smooth scrolling on anchor link clicks
@@ -64,12 +62,6 @@ $(function(){
     
     $('.slider').slider({
         interval: 4500
-    });
-    
-    // My custom parallax
-    $(window).on('scroll', () => {
-        var ypos = window.pageYOffset;
-        $('.parallax-img').css('top', ypos * .7 + 'px');
     });
     
     // Countdown
