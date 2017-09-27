@@ -1,6 +1,6 @@
 $(function(){
     //preloader
-    $(window).on('load', () => {
+    $(window).on('load', function(){
 		$('.preloader').slideUp();
 	});
     
@@ -18,7 +18,7 @@ $(function(){
     });
     
     // Typewriter script
-    setTimeout(() => {
+    setTimeout(function(){
         var app = document.getElementById('animateText');
 
         var typewriter = new Typewriter(app, {
@@ -42,7 +42,7 @@ $(function(){
     }, 3000);
     
     //animations
-    $(window).on('scroll', () => {
+    $(window).on('scroll', function(){
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $('.to-top').addClass('slideup').removeClass('slidedown');
         } else {
