@@ -1,7 +1,9 @@
 $(function(){
-    $('.modal').modal();
+    $('.modal').modal({
+        opacity: .1
+    });
     
-    var hash = $(window).hash;
+    var hash = window.location.hash;
     
     if (hash == "#thanks"){
         $(hash).modal('open');
