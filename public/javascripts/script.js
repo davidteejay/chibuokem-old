@@ -1,4 +1,11 @@
 $(function(){
+    $('.modal').modal();
+    
+    var hash = $(window).hash;
+    
+    if (hash == "#thanks"){
+        $(hash).modal('open');
+    }
     //preloader
     $(window).on('load', function(){
 		$('.preloader').slideUp();
@@ -7,7 +14,7 @@ $(function(){
     $('.parallax').parallax();
     
     //smooth scrolling on anchor link clicks
-    $(".next, .to-top").on('click', function(){
+    $(".next, .to-top").on('click', function(event){
         event.preventDefault();
 
         var hash = this.hash;
@@ -79,5 +86,14 @@ $(function(){
 			});
 			$(this).unbind('inview');
 		}
-	})
+	});
+    
+    var options = [
+        { selector: '#social-menu', offset: 200, callback: function(el) {
+            Materialize.showStaggeredList($(el));
+        } 
+        },
+    ];
+    
+     Materialize.scrollFire(options);
 });

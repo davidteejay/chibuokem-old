@@ -55,10 +55,12 @@
     </div>
     <div class="wrapper2" id="wrapper2">
         <div class="wrapper">
+<!--
             <h4 class="center">I'M <span class="animate-text black-text light text-lighten-3" id="animateText">
                 <span class="typewriter-wrapper"></span>
                 <span class="type-writer-cursor"></span>
             </span></h4>
+-->
             <div class="things-do row">
                 <div class="col m4 s12 center">
                     <img src="/images/logos/webdesign.png" alt="">
@@ -179,6 +181,7 @@
     </div>
     <div class="wrapper3" id="wrapper3">
         <div class="row">
+            <h5 class="light">HERE ARE A FEW OF THE PROJECTS I'VE WORKED ON:</h5>
             <div class="col s12 m4 center">
                 <img src="/images/alawhyte.png" alt="" class="materialboxed responsive-img z-depth-1" data-caption="Alawhyte's Official Website @ alawhyte.com">
                 <h4 class="light">Alawhyte</h4>
@@ -193,10 +196,61 @@
             </div>
         </div>
     </div>
+    <div class="wrapper4 parallax-container" id="wrapper4">
+        <div class="row">
+            <h3 class="light center">GET IN TOUCH</h3>
+            <div class="col s10">
+                <p>I'll love to here from you. Fill the form below if you want to discuss about a project, or if you have anything at all to discuss with me</p>
+                <form class="row" action="https://formspree.io/mail@temilorun.com" method="post">
+                    <div class="input-field col s12">
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="input-field col m6 s12">
+                        <label for="topic">Topic</label>
+                        <input type="text" id="topic" name="_subject" required>
+                    </div>
+                    <div class="input-field col m6 s12">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="materialize-textarea" required></textarea>
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <input type="hidden" name="_next" value="http://chibuokem.herokuapp.com/#thanks" />
+                    </div>
+                    <div class="row center">
+                        <button type="submit" class="btn teal darken-2">SEND</button>
+                    </div>
+                </form>
+                <div class="modal" id="thanks">
+                    <div class="modal-content">
+                        <h3>Thanks for reaching out</h3>
+                        <h6 class="light">I'll reply you shortly</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2 center">
+                <ul class="social-menu" id="social-menu">
+                    <li><a href="https://github.com/davidteejay" target="_blank" data-delay="50" data-tooltip="GitHub" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-github-circle"></i></a></li>
+                    <li><a href="https://linkedin.com/in/chibuokem-onyekwelu" target="_blank" data-delay="50" data-tooltip="LinkedIn" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-linkedin"></i></a></li>
+                    <li><a href="https://facebook.com/chibuokem.onyekwelu" target="_blank" data-delay="50" data-tooltip="Facebook" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-facebook"></i></a></li>
+                    <li><a href="https://instagram.com/i_am_tushh" target="_blank" data-delay="50" data-tooltip="Instagram" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/DavidTeejayC" target="_blank" data-delay="50" data-tooltip="Twitter" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-twitter"></i></a></li>
+                    <li><a href="https://plus.google.com/112517983973843716765" target="_blank" data-delay="50" data-tooltip="Google+" data-position="left" class="btn-floating tooltipped z-depth-0 transparent center"><i class="mdi mdi-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="parallax"><img src="/images/image2.jpg" alt=""></div>
+    </div>
+    <div class="footer">
+        <p class="right-align">&copy; Chibuokem Onyekwelu. All rights reserved</p>
+    </div>
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.inview.min.js"></script>    
     <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
     <script type="text/javascript" src="/javascripts/typewriter.js"></script>
-    <script type="text/javascript" src="/javascripts/script.min.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
 </body>
 </html>

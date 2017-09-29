@@ -31,7 +31,7 @@ body, html {
     right: 0;
     bottom: 0;
     z-index: 999999;
-    background: rgba(#fff, .8);
+    background: rgba(#fff, 1);
     
     .content {
         width: 100%;
@@ -337,7 +337,7 @@ body, html {
         .tools {
             width: 100%;
             background-color: #ebebeb;
-            clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
 
             .row {
                 padding: {
@@ -377,7 +377,6 @@ body, html {
     }
     
     .skills {
-        clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
         width: 100%;
         height: auto;
         padding: 10px;
@@ -456,6 +455,11 @@ body, html {
         width: 100%;
         height: auto;
         padding: 30px;
+        
+        h5 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
         
         .slider {
             width: 50%;
@@ -578,6 +582,92 @@ body, html {
                 }
             }
         }
+    }
+}
+
+.wrapper4 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    background-color: rgba(#fff, .3);
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+    
+    .row {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        
+        h3 {
+            width: fit-content;
+            margin: auto !important;
+        }
+        
+        .col.s10 {
+            padding: 50px;
+            
+            p {
+                width: 75%;
+            }
+            
+            form {
+                margin: 0;
+                
+                input, textarea {
+                    &:focus {
+                        border-bottom: 2px solid #000;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        
+        .col.s2 {
+            ul {
+                li {
+                    display: block;
+                    opacity: 0;
+                    margin: {
+                        top: 10px;
+                        bottom: 10px;
+                    }
+                    
+                    a {
+                        width: 65px;
+                        height: 65px;
+                        border: 2px solid #000;
+                        color: #000 !important;
+                        padding: 0 !important;
+                        line-height: 65px !important;
+                        transition: margin-right .5s;
+                        
+                        &:hover {
+                            margin-right: 10px;    
+                        }
+                        
+                        .mdi:before {
+                            color: #000;
+                            height: 65px;
+                            width: 65px;
+                            margin: 0;
+                            line-height: 65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    
+    p {
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+        padding-right: 20px; 
     }
 }
 
