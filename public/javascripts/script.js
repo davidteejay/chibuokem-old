@@ -8,10 +8,6 @@ $(function(){
     if (hash == "#thanks"){
         $(hash).modal('open');
     }
-    //preloader
-    $(window).on('load', function(){
-		$('.preloader').slideUp();
-	});
     
     $('.parallax').parallax();
     
@@ -27,35 +23,37 @@ $(function(){
     });
     
     // Typewriter script
-    setTimeout(function(){
-        var app = document.getElementById('animateText');
-
-        var typewriter = new Typewriter(app, {
-            loop: true,
-            typingSpeed: 300
-        });
-
-
-
-        typewriter.typeString('SOCIAL')
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString('JOVIAL')
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString('SMART')
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString('EGOCENTRIC')
-            .start();
-    }, 3000);
+//    setTimeout(function(){
+//        var app = document.getElementById('animateText');
+//
+//        var typewriter = new Typewriter(app, {
+//            loop: true,
+//            typingSpeed: 300
+//        });
+//
+//
+//
+//        typewriter.typeString('SOCIAL')
+//            .pauseFor(2000)
+//            .deleteAll()
+//            .typeString('JOVIAL')
+//            .pauseFor(2000)
+//            .deleteAll()
+//            .typeString('SMART')
+//            .pauseFor(2000)
+//            .deleteAll()
+//            .typeString('EGOCENTRIC')
+//            .start();
+//    }, 3000);
     
     //animations
     $(window).on('scroll', function(){
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $('.to-top').addClass('slideup').removeClass('slidedown');
+            $('.a2a_kit').fadeIn();
         } else {
             $('.to-top').addClass('slidedown').removeClass('slideup');
+            $('.a2a_kit').fadeOut();
         }
     });
     

@@ -2,6 +2,7 @@ body, html {
     width: 100%;
     height: 100%;
     min-height: 600px;
+    font-family: "Quicksand", "Roboto", sans-serif;
     
     &::-webkit-scrollbar {
         width: 13px;
@@ -541,7 +542,7 @@ body, html {
             h4 {
                 font-size: 24px;
                 text-transform: uppercase;
-                margin-top: 5px;
+                margin-top: 25px;
                 
                 &:first-letter {
                     font-size: 32px;
@@ -554,7 +555,7 @@ body, html {
 .wrapper4 {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 35px;
     padding-top: 30px;
     background-color: rgba(#fff, .3);
     clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
@@ -574,11 +575,19 @@ body, html {
             
             p {
                 width: 75%;
+                
+                @media screen and (max-width: 600px){
+                    width: 100%;
+                }
             }
             
             form {
                 margin: 0;
                 width: 75%;
+                
+                @media screen and (max-width: 600px){
+                    width: 100%;
+                }
                 
                 input, textarea {
                     &:focus {
@@ -598,6 +607,11 @@ body, html {
                         top: 10px;
                         bottom: 10px;
                     }
+                    padding: 15px;
+                    padding: {
+                        top: 0px;
+                        bottom: 0px;
+                    }
                     
                     a {
                         width: 65px;
@@ -609,7 +623,7 @@ body, html {
                         transition: margin-right .5s;
                         
                         &:hover {
-                            margin-right: 10px;    
+                            margin-right: 25px;    
                         }
                         
                         .mdi:before {
@@ -629,10 +643,6 @@ body, html {
 .footer {
     height: auto;
     padding: 0;
-    padding:{
-        top: 10px;
-        bottom: 20px;
-    }
     margin: 0 !important;
     
     p {
@@ -641,6 +651,24 @@ body, html {
         margin: 0;
         padding-right: 20px; 
     }
+}
+
+.a2a_kit {
+    border: {
+        top-right-radius: 0 !important;
+        bottom-right-radius: 0 !important;
+    }
+    opacity: .4;
+    transition: opacity .5s;
+    box-shadow: 2px 2px 15px rgba(#000, .5);
+    
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.a2a_svg, .a2a_count { 
+    border-radius: 0 !important; 
 }
 
 .modal {
@@ -660,9 +688,14 @@ body, html {
     background-color: #fff;
     color: #000;
     border-top: 1px solid #d5d5d5;
+    padding: 0 !important;
     font: {
         size: 18px;
-        weight: lighter;
+        weight: light;
+    }
+    
+    @media screen and (max-width: 600px){
+        font-size: 12px;
     }
 }
 
