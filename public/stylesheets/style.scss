@@ -157,6 +157,12 @@ body, html {
                         width: 65px;
                         line-height: 65px;
                         margin: 10px;
+                        opacity: .4;
+                        transition: opacity .5s;
+                        
+                        &:hover {
+                            opacity: 1;
+                        }
                         
                         @media screen and (max-width: 1120px){
                             line-height: 40px;
