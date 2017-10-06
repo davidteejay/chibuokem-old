@@ -1,6 +1,6 @@
 $(function(){
     $('.modal').modal({
-        opacity: .1
+        opacity: .7
     });
     
     var hash = window.location.hash;
@@ -46,6 +46,10 @@ $(function(){
 //            .start();
 //    }, 3000);
     
+    $('.slider').slider({
+        interval: 4500
+    });
+    
     //animations
     $(window).on('scroll', function(){
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -67,8 +71,10 @@ $(function(){
         }
     });
     
-    $('.slider').slider({
-        interval: 4500
+    $(".slideanim").bind('inview', function(event, visible, visiblePartX, visiblePartY){
+        if(visible){
+            $(this).addClass('slideup');
+        }
     });
     
     // Countdown
