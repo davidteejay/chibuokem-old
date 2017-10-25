@@ -22,30 +22,6 @@ $(function(){
         }, 900);
     });
     
-    // Typewriter script
-//    setTimeout(function(){
-//        var app = document.getElementById('animateText');
-//
-//        var typewriter = new Typewriter(app, {
-//            loop: true,
-//            typingSpeed: 300
-//        });
-//
-//
-//
-//        typewriter.typeString('SOCIAL')
-//            .pauseFor(2000)
-//            .deleteAll()
-//            .typeString('JOVIAL')
-//            .pauseFor(2000)
-//            .deleteAll()
-//            .typeString('SMART')
-//            .pauseFor(2000)
-//            .deleteAll()
-//            .typeString('EGOCENTRIC')
-//            .start();
-//    }, 3000);
-    
     $('.slider').slider({
         interval: 4500
     });
@@ -59,22 +35,46 @@ $(function(){
             $('.to-top').addClass('slidedown').removeClass('slideup');
             $('.a2a_kit').fadeOut();
         }
-    });
+
+        $(".determinate").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(".html").addClass("flow-html");
+                $(".css").addClass("flow-css");
+                $(".js").addClass("flow-js");
+                $(".python").addClass("flow-python");
+                $(".php").addClass("flow-php");
+            }
+        });
     
-    $(".determinate").bind('inview', function(event, visible, visiblePartX, visiblePartY){
-        if(visible){
-            $(".html").addClass("flow-html");
-            $(".css").addClass("flow-css");
-            $(".js").addClass("flow-js");
-            $(".python").addClass("flow-python");
-            $(".php").addClass("flow-php");
-        }
-    });
-    
-    $(".slideanim").bind('inview', function(event, visible, visiblePartX, visiblePartY){
-        if(visible){
-            $(this).addClass('slideup');
-        }
+        $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(this).addClass("slideup");
+            }
+        });
+
+        $(".slideanim2").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(this).addClass("slidedown");
+            }
+        });
+
+        $(".slideanim3").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(this).addClass("slideright");
+            }
+        });
     });
     
     // Countdown
