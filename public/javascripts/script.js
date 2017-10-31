@@ -1,6 +1,8 @@
 $(function(){
     $('.modal').modal({
-        opacity: .7
+        opacity: 1,
+        starting_top: '0%',
+        ending_top: '0%'
     });
     
     var hash = window.location.hash;
