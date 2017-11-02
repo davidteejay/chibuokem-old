@@ -2,7 +2,10 @@ $(function(){
     $('.modal').modal({
         opacity: 1,
         starting_top: '0%',
-        ending_top: '0%'
+        ending_top: '0%',
+        complete: function(){
+            window.location.hash = "#!"
+        }
     });
     
     var hash = window.location.hash;
