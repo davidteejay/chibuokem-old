@@ -29,7 +29,7 @@ $(function(){
     
     $('.slider').slider({
         interval: 4500
-    });
+	});
     
     //animations
     $(window).on('scroll', function(){
@@ -79,10 +79,19 @@ $(function(){
             if (pos < winTop + 600) {
                 $(this).addClass("slideright");
             }
+		});
+		
+		$(".slideanim4").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(this).addClass("scaleup");
+            }
         });
     });
     
-    // Countdown
+    // Skills percentage Countup
     $('#skills .col .valign .right').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
 			$(this).find('.timer').each(function () {
