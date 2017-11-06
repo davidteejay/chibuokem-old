@@ -340,7 +340,8 @@ h1, h2, h3, h4, h5, h6 {
             height: auto;
             width: 100%;
             margin-bottom: 0;
-            padding: 35px;
+			padding: 35px;
+			padding-bottom: 50px;
             
             .col {
                 padding: 10px;
@@ -357,8 +358,24 @@ h1, h2, h3, h4, h5, h6 {
         
         .tools {
             width: 100%;
-            background-color: #ebebeb;
-            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+			background-color: #ebebeb;
+			position: relative;
+			z-index: 1;
+			
+			
+			&:after {
+				background: inherit;
+				top: 0;
+				content: '';
+				display: block;
+				height: 50%;
+				left: 0;
+				position: absolute;
+				right: 0;
+				transform: skewY(2deg);
+				transform-origin: 100%;
+				z-index: -1;
+			}
 
             .row {
                 padding: {
@@ -490,10 +507,6 @@ h1, h2, h3, h4, h5, h6 {
         margin: {
             top: 5px;
             bottom: 30px;
-		}
-		
-		.parallax img {
-			filter: blur(3px);
 		}
         
         h4 {
@@ -754,7 +767,24 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     height: auto;
     padding: 0;
-    margin: 0 !important;
+	margin: 0 !important;
+	position: relative;
+	z-index: 1;
+	
+	
+	&:after {
+		background: inherit;
+		top: 0;
+		content: '';
+		display: block;
+		height: 50%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		transform: skewY(-1deg);
+		transform-origin: 100%;
+		z-index: -1;
+	}
     
     p {
         height: 50px;
