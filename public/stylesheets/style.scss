@@ -43,8 +43,12 @@ body, html {
     width: 100%;
     height: 100%;
     min-height: 600px;
-	font-family: "Museo", sans-serif;
-	color: #555;
+	font: {
+        family: "Museo", sans-serif !important;
+        weight: 500 !important;
+    }
+    color: #555;
+    overflow-x: hidden;
     
     &::-webkit-scrollbar {
         width: 13px;
@@ -209,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
                         line-height: 65px;
                         margin: 10px;
 						opacity: .7;
-						filter: blur(1px);
+						filter: blur(.5px);
                         transition: opacity .5s, filter .5s;
                         
                         &:hover {
@@ -224,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
                         }
 
                         @media screen and (max-width: 600px){
-                            margin: 0px !important;
+                            margin: 5px !important;
                         }
                         
                         @media screen and (max-height: 500px){
@@ -421,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 0;
 		
 		.parallax .blur-parallax {
-			filter: blur(0.8px);
+			filter: grayscale(50%);
 		}
         
         .hide-on-med-and-down {
@@ -814,22 +818,70 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.a2a_kit {
-    border: {
-        top-right-radius: 0 !important;
-        bottom-right-radius: 0 !important;
-    }
-    opacity: .4;
-    transition: opacity .5s;
-    background: transparent !important;
+// .a2a_kit {
+//     border: {
+//         top-right-radius: 0 !important;
+//         bottom-right-radius: 0 !important;
+//     }
+//     opacity: .4;
+//     transition: opacity .5s;
+//     background: transparent !important;
     
-    &:hover {
-        opacity: 1;
-    }
-}
+//     &:hover {
+//         opacity: 1;
+//     }
+// }
 
-.a2a_svg, .a2a_count { 
-    border-radius: 0 !important; 
+// .a2a_svg, .a2a_count { 
+//     border-radius: 0 !important; 
+// }
+
+#social-float-bar {
+    top: 250px;
+    position: fixed;
+    left: 0;
+    margin-left: 0px;
+    z-index: 99;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.35s;
+    border: {
+        top-right-radius: 10px;
+        bottom-right-radius: 10px;
+    }
+    padding: 3px;
+
+    @media screen and (max-width: 600px){
+        display: none;
+    }
+    
+    a {
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        color: #fff;
+        background: #aaa;
+        font-size: 19px;
+        margin-bottom: 4px;
+    }
+
+    a.twitter {
+        background: #00aced;
+    }
+
+    a.facebook {
+        background: #3b5998;
+    }
+
+    a.google {
+        background: #dd4b39;
+    }
+
+    a.linkedin {
+        background: #007bb5;
+    }
 }
 
 .modal {
