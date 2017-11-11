@@ -33,6 +33,7 @@ $(function(){
     
     //animations
     $(window).on('scroll', function(){
+        alert("YO");
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $('.to-top').addClass('slideup').removeClass('slidedown');
             $('.a2a_kit').fadeIn();
