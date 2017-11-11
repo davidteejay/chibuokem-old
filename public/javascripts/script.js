@@ -32,8 +32,7 @@ $(function(){
 	});
     
     //animations
-    $(window).on('scroll', function(){
-        alert("YO");
+    $(window).scroll(function(){
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $('.to-top').addClass('slideup').removeClass('slidedown');
             $('.a2a_kit').fadeIn();
@@ -95,17 +94,22 @@ $(function(){
     // Skills percentage Countup
     $('#skills .col .valign .right').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
-			$(this).find('.timer').each(function () {
-				var $this = $(this);
-				$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-					duration: 2000,
-					easing: 'swing',
-					step: function () {
-						$this.text(Math.ceil(this.Counter));
-					}
-				});
-			});
-			$(this).unbind('inview');
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            
+            if (pos < winTop + 600) {
+                $(this).find('.timer').each(function () {
+                    var $this = $(this);
+                    $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.ceil(this.Counter));
+                        }
+                    });
+                });
+                $(this).unbind('inview');
+            }
 		}
 	});
     

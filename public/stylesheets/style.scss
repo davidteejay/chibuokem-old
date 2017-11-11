@@ -48,7 +48,7 @@ body, html {
         weight: 500 !important;
     }
     color: #555;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     
     &::-webkit-scrollbar {
         width: 13px;
@@ -228,14 +228,14 @@ h1, h2, h3, h4, h5, h6 {
                         }
 
                         @media screen and (max-width: 600px){
-                            margin: 5px !important;
+                            margin: 2px !important;
                         }
                         
                         @media screen and (max-height: 500px){
                             line-height: 40px;
                             height: 40px;
                             width: 40px;
-                            margin: 5px;
+                            margin: 2px;
                         }
                         
                         .mdi::before {
@@ -424,8 +424,8 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px;
 		margin-bottom: 0;
 		
-		.parallax .blur-parallax {
-			filter: grayscale(50%);
+		.parallax img {
+			filter: grayscale(75%);
 		}
         
         .hide-on-med-and-down {
@@ -818,24 +818,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-// .a2a_kit {
-//     border: {
-//         top-right-radius: 0 !important;
-//         bottom-right-radius: 0 !important;
-//     }
-//     opacity: .4;
-//     transition: opacity .5s;
-//     background: transparent !important;
-    
-//     &:hover {
-//         opacity: 1;
-//     }
-// }
-
-// .a2a_svg, .a2a_count { 
-//     border-radius: 0 !important; 
-// }
-
 #social-float-bar {
     top: 250px;
     position: fixed;
@@ -859,6 +841,14 @@ h1, h2, h3, h4, h5, h6 {
 
     @media screen and (max-width: 600px){
         display: none;
+    }
+
+    .txt {
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        color: #000 !important;
+        margin-bottom: 5px;
     }
     
     a {
