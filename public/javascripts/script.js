@@ -114,10 +114,14 @@ $(function(){
 	});
     
     var options = [
-        { selector: '#social-menu', offset: 200, callback: function(el) {
+        { selector: '#social-menu', offset: 300, callback: function(el) {
             Materialize.showStaggeredList($(el));
         } 
         },
+        { selector: "#social-menu2", offset: 300, callback:function(el){
+            Materialize.showStaggeredList($(el));
+        } 
+        }
     ];
     
      Materialize.scrollFire(options);
