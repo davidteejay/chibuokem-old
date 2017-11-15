@@ -48,7 +48,11 @@ body, html {
         weight: 500 !important;
     }
     color: #555;
-    // overflow-x: hidden;
+    background: {
+        image: url(/images/background.png);
+        size: contain;
+        repeat: repeat-y;
+    }
     
     &::-webkit-scrollbar {
         width: 13px;
@@ -104,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper1 {
     height: 100%;
     width: 100%;
+    z-index: 1;
     
     .parallax-img {
         @media screen and (max-width: 992px){
@@ -663,6 +668,11 @@ h1, h2, h3, h4, h5, h6 {
 		left: auto;
 		right: auto;
         box-sizing: border-box;
+        padding: 3px;
+
+        @media screen and (max-width: 992px){
+            width: 50%;
+        }
 
 		img {
 			width: 100%;
@@ -670,6 +680,10 @@ h1, h2, h3, h4, h5, h6 {
 			margin: 0;
 			padding: 0;
             cursor: pointer;
+
+            &:hover {
+                opacity: 1 !important;
+            }
             
 		}
 
