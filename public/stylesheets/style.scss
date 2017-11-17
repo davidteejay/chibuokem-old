@@ -350,7 +350,8 @@ h1, h2, h3, h4, h5, h6 {
             width: 100%;
             margin-bottom: 0;
 			padding: 35px;
-			padding-bottom: 50px;
+            padding-bottom: 50px;
+            background-color: #fff;
             
             .col {
                 padding: 10px;
@@ -517,7 +518,8 @@ h1, h2, h3, h4, h5, h6 {
             bottom: 50px;
 		}
 		position: relative;
-		z-index: 1;
+        z-index: 1;
+        background: linear-gradient(rgba(#fff, 1), rgba(#fff, 1), rgba(#fff, .8), rgba(#fff, 0));
 
 		&:after {
 			bottom: 0;
