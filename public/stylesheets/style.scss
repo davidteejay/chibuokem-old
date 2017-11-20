@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
                         line-height: 65px;
                         margin: 10px;
 						opacity: .7;
-						filter: blur(.5px);
+						filter: blur(.9px);
                         transition: opacity .5s, filter .5s;
                         
                         &:hover {
@@ -388,32 +388,20 @@ h1, h2, h3, h4, h5, h6 {
 			}
 
             .row {
-                padding: {
-                    left: 65px;
-                    right: 65px;
-                    top: 30px;
-                }
+                padding: 0 50px;
                 margin-bottom: 0px;
 
                 @media screen and (max-width: 600px){
-                    padding: {
-                        left: 10px;
-                        right: 10px;
-                    }
+                    padding: 20px;
                 }
 
                 .col {
-                    height: 250px;
-                    padding: 30px;
-                    
-
-                    @media screen and (max-width: 992px){
-                        height: 200px;
-                    }
+                    padding: 50px;
+                    height: 200px;
 
                     @media screen and (max-width: 600px){
-                        height: 150px;
-                        padding: 5px;
+                        padding: 10px;
+                        height: 75px;
                     }
 
                     .valign {
@@ -816,8 +804,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
 	margin: 0 !important;
 	position: relative;
-	z-index: 1;
-	
+    z-index: 1;
 	
 	&:after {
 		background: inherit;
@@ -828,7 +815,7 @@ h1, h2, h3, h4, h5, h6 {
 		left: 0;
 		position: absolute;
 		right: 0;
-		transform: skewY(-0.5deg);
+		transform: skewY(-1deg);
 		transform-origin: 100%;
 		z-index: -1;
 	}
@@ -837,7 +824,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 50px;
         line-height: 50px;
         margin: 0;
-        padding-right: 20px; 
+        padding-right: 20px;
     }
 }
 

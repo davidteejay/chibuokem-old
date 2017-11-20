@@ -24,7 +24,7 @@ $(function(){
 
         $('html, body').animate({
             scrollTop: $(hash).offset().top
-        }, 900);
+        }, 500);
     });
     
     $('.slider').slider({
