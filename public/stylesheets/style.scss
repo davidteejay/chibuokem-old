@@ -49,9 +49,11 @@ body, html {
     }
     color: #555;
     background: {
-        image: url(/images/background.png);
-        size: contain;
-        repeat: repeat-y;
+        image: url(../images/image2.jpg);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+        attachment: fixed;
     }
     
     &::-webkit-scrollbar {
@@ -110,26 +112,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     z-index: 1;
     
-    .parallax-img {
-        @media screen and (max-width: 992px){
-            background: {
-                image: url(/images/image2.jpg);
-                repeat: no-repeat;
-                size: cover;
-                position: center right;
-                attachment: fixed;
-            }
-            height: 100%;
-            width: 100%;
-        }
-        
-        img {
-            @media screen and (max-width: 992px){
-                opacity: 0;
-            }
-        }
-    }
-    
     .row {
         height: 100%;
         width: 100%;
@@ -163,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
                     height: 220px;
                     width: 210px;
                     padding: 10px;
-                    border-radius: 100%;
+                    border-radius: 100% !important;
                     margin: auto;
                     margin-bottom: 20px;
                     background-color: #cac6d4;
@@ -338,11 +320,6 @@ h1, h2, h3, h4, h5, h6 {
             margin: 0 ;
             margin-bottom: 40px;
             font-style: bolder;
-            
-            .typewriter-wrapper {
-                border-bottom: .5px solid olivedrab;
-                padding-bottom: 0 !important;
-            }
         }
         
         .things-do {
@@ -368,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
         
         .tools {
             width: 100%;
-			background-color: #ebebeb;
+			background-color: #f0f0f0;
 			position: relative;
 			z-index: 1;
 			
@@ -500,25 +477,12 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         height: auto;
         padding: 30px;
-        padding-top: 15px;
-        margin: {
-            top: 5px;
+        padding: {
+            top: 15px;
             bottom: 50px;
-		}
-		position: relative;
-        z-index: 1;
-        background: linear-gradient(rgba(#fff, 1), rgba(#fff, 1), rgba(#fff, .8), rgba(#fff, 0));
-
-		&:after {
-			bottom: 0;
-			left: 5%;
-			height: 1px;
-			width: 90%;
-			background-color: #a1a1a1;
-			content: '';
-			z-index: -1;
-			position: absolute;
-		}
+        }
+        margin-top: 5px;
+        background-color: #fff;		
         
         h4 {
             margin: {
@@ -637,11 +601,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper3 {
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
 	margin-bottom: 20px;
 	height: fit-content;
     width: 100%;
+    background: {
+        image: url(../images/background.png);
+        size: contain;
+        position: center;
+        repeat: repeat-y;
+        color: #f0f0f0;
+    }
     
     h4 {
+        margin: 0;
+
         @media screen and (max-width: 600px){
             font-size: 26px;
         }
@@ -688,13 +665,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     padding: 35px;
     padding-top: 30px;
-    background-color: rgba(#fff, .3);
-	clip-path: polygon(0 0, 100% 0%, 100% 93%, 0 100%);
 	margin-top: 20px;
-	
-	.parallax .sepia {
-		filter: sepia(50%);
-	}
     
     .row {
         width: 100%;
@@ -800,90 +771,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-    height: fit-content;
     padding: 5px;
 	margin: 0 !important;
-	position: relative;
-    z-index: 1;
-	
-	&:after {
-		background: inherit;
-		top: 0;
-		content: '';
-		display: block;
-		height: 50%;
-		left: 0;
-		position: absolute;
-		right: 0;
-		transform: skewY(-1deg);
-		transform-origin: 100%;
-		z-index: -1;
-	}
+    height: 40px;
+    background: #fff !important;
     
     p {
-        height: 50px;
-        line-height: 50px;
-        margin: 0;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 !important;
         padding-right: 20px;
-    }
-}
-
-#social-float-bar {
-    top: 250px;
-    position: fixed;
-    left: 0;
-    margin-left: 0px;
-    z-index: 99;
-    width: fit-content;
-    text-align: center;
-    transition: all 0.35s;
-    border: {
-        top-right-radius: 10px;
-        bottom-right-radius: 10px;
-    }
-    padding: 5px;
-    opacity: .2;
-    transition: opacity .5s;
-    background-color: #fff;
-
-    &:hover {
-        opacity: 1;
-    }
-
-    .txt {
-        display: block;
-        font-size: 15px;
-        font-weight: 700;
-        color: #000 !important;
-        margin-bottom: 5px;
-    }
-    
-    a {
-        display: block;
-        height: 45px;
-        line-height: 45px;
-        width: 45px;
-        border-radius: 50%;
-        color: #fff;
-        background: #aaa;
-        font-size: 19px;
-        margin-bottom: 4px;
-    }
-
-    a.twitter {
-        background: #00aced;
-    }
-
-    a.facebook {
-        background: #3b5998;
-    }
-
-    a.google {
-        background: #dd4b39;
-    }
-
-    a.linkedin {
-        background: #007bb5;
     }
 }
 
