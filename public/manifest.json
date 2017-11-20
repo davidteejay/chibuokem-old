@@ -1,0 +1,13 @@
+{
+  "name": "Chibuokem Onyekwelu",
+  "short_name": "Chibuokem",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://chibuokem.herokuapp.com"
+  }]
+}
