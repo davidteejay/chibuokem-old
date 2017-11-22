@@ -1,0 +1,26 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+	font: {
+        family: "Museo", sans-serif !important;
+        weight: 500 !important;
+    }
+    color: #555;
+    background: {
+        image: url(../images/image2.jpg);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+        attachment: fixed;
+    }
+}
+
+@import "utils/_fonts";
+@import "utils/_anims";
+@import "components/_header";
+@import "components/_scrollbar";
+@import "components/_footer";
+@import "components/_modal";
+@import "components/_to-top";
+@import "pages/_home";
